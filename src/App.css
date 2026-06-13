@@ -170,12 +170,25 @@ nav ul {
   }
 }
 
+
+.grid {
+  display: grid;
+}
+
+.grid-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 6.4rem;
+}
+
 /* hero section  */
+
+/* hero section */
 
 .hero-section .container {
   padding: 3.2rem;
   margin: 9rem auto;
-  gap: 6.4rem;
 }
 
 .paragraph {
@@ -184,7 +197,7 @@ nav ul {
 
 .heading-xl {
   font-family: inherit;
-  font-size: clamp(5.2rem, 6vw, 4.241rem);
+  font-size: clamp(4.241rem, 6vw, 5.2rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -1px;
@@ -198,18 +211,32 @@ nav ul {
 
 .container .banner-image {
   width: 100%;
+  max-width: 60rem;
+  height: auto;
 }
 
+/* Mobile */
+
 @media screen and (max-width: 990px) {
+  .grid-two-col {
+    grid-template-columns: 1fr;
+  }
+
   .hero-content {
     order: 1;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: 0;
   }
 
   .container .banner-image {
     width: 80%;
-    order: 0;
   }
 }
+
+
 
 /* About Section  */
 
